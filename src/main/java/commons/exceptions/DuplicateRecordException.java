@@ -1,14 +1,10 @@
-package onboard.common.exceptions;
+package commons.exceptions;
 
 public class DuplicateRecordException extends Exception {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2L;
-	
-	public DuplicateRecordException(String message)
-	{
+
+	public DuplicateRecordException(String message) {
 		super(message);
 	}
 

@@ -1,8 +1,11 @@
 package onboard.signin.validator;
 
-import onboard.common.beans.Validator;
+import org.springframework.stereotype.Component;
+
+import framework.validation.Validator;
 import onboard.signin.beans.UserCredential;
 
+@Component
 public class SignInValidator implements Validator<UserCredential> {
 
 	public boolean isValid(UserCredential credential) {

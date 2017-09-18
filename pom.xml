@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.java.tyre.collector</groupId>
-  <artifactId>TyreCollector</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  
-  <repositories>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.java.tyre.collector</groupId>
+	<artifactId>TyreCollector</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<repositories>
 		<repository>
 			<id>maven2-repository.java.net</id>
 			<name>Java.net Repository for Maven</name>
@@ -14,37 +14,40 @@
 			<layout>default</layout>
 		</repository>
 	</repositories>
-	
-  <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
-  <dependencies>
-	<dependency>
-	<groupId>com.sun.jersey</groupId>
-	<artifactId>jersey-server</artifactId>
-	<version>1.9.1</version>
-	</dependency>
-	
-	 <dependency>
-            <groupId>com.sun.jersey</groupId>
-            <artifactId>jersey-client</artifactId>
-            <version>1.9</version>
-     </dependency>
-	<dependency>
-	<groupId>com.sun.jersey</groupId>
-	<artifactId>jersey-json</artifactId>
-	<version>1.9.1</version>
-</dependency>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>1.9.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.9</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.9.1</version>
+		</dependency>
 
 
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>5.1.6</version>
-</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.3.11.RELEASE</version>
+		</dependency>
+	</dependencies>
 
-  </dependencies>
-
-  <build>
+	<build>
 		<finalName>TyreCollector</finalName>
 		<plugins>
 			<plugin>
@@ -56,5 +59,5 @@
 			</plugin>
 		</plugins>
 	</build>
-  
+
 </project>

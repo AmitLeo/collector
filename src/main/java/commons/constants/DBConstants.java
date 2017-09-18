@@ -1,5 +1,16 @@
-package onboard.common.constants;
+package commons.constants;
 
+
+
+/**
+ * 
+ * 
+ *  TO do : This class needs to be converTED INTO ENUM 
+ * 
+ * 
+ * @author I331862
+ *
+ */
 public class DBConstants {
 
 	// MOBILE_NUMBER NUMBER(12),EMAIL_ID VARCHAR2(100),NAME VARCHAR2(100))

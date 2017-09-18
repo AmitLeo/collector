@@ -5,12 +5,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import onboard.common.constants.DBConstants;
-import onboard.database.ConnectionFactory;
+import org.springframework.stereotype.Component;
+
+import commons.constants.DBConstants;
+import commons.database.ConnectionFactory;
 import onboard.signup.beans.Address;
 import onboard.signup.beans.Seller;
 
-public class SignUpDAO  {
+@Component
+public class SignUpDAO {
 
 	private static final String COMMA = " , ";
 	private static final String SPACE = " ";
@@ -33,14 +36,14 @@ public class SignUpDAO  {
 			addAddress(seller, seller.getAddress());
 
 		} catch (Exception ex) {
-			
+
 			ex.printStackTrace();
 			// to do : handle this exception
 
 		} finally {
 			try {
-			if(con!=null)
-				con.close();
+				if (con != null)
+					con.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -62,7 +65,7 @@ public class SignUpDAO  {
 			pStatement.setString(4, address.getCity());
 			pStatement.setLong(5, address.getPinCode());
 			pStatement.setString(6, address.getState());
-			
+
 			pStatement.execute();
 
 		} catch (Exception ex) {
@@ -77,8 +80,7 @@ public class SignUpDAO  {
 
 	}
 
-	public boolean isSellerRegistered(Seller seller)
-	{
+	public boolean isSellerRegistered(Seller seller) {
 		String name = seller.getPhoneNumber();
 		boolean isSellerRegistered = false;
 		Connection conn = ConnectionFactory.getDbConnection();
@@ -92,7 +94,7 @@ public class SignUpDAO  {
 			statement.setString(1, name);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
-				
+
 				isSellerRegistered = true;
 			}
 
@@ -101,10 +103,8 @@ public class SignUpDAO  {
 			System.out.println("SQL Exception occurred..");
 			ex.printStackTrace();
 			return isSellerRegistered;
-		}
-		finally
-		{
-			if(conn!=null)
+		} finally {
+			if (conn != null)
 				try {
 					conn.close();
 				} catch (SQLException e) {

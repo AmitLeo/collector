@@ -5,11 +5,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import onboard.common.constants.DBConstants;
-import onboard.database.ConnectionFactory;
+import org.springframework.stereotype.Component;
+
+import commons.constants.DBConstants;
+import commons.database.ConnectionFactory;
 import onboard.signin.beans.UserCredential;
 import onboard.signin.constants.SignInConstants;
 
+@Component
 public class SignInDAO {
 
 	private static final String COMMA = " , ";
